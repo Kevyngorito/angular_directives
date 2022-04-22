@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
   count = 0;
+  nome = "Kevyn Gorito";
 
   pessoas = [
     {
@@ -39,6 +40,10 @@ export class AppComponent implements OnInit{
         clearInterval(interval)
       }
     }, 1000)
+  }
+
+   clicado(nome: string): void {
+    console.log('Este botão foi clicado por ', this.nome)
   }
 
 }
