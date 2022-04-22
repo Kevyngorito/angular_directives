@@ -50,6 +50,18 @@
     </li>
 </ul>
 
-<h3> {{ nome }} </h3>
 
-<button class="btn btn-success col-4 mx-auto" (click)="clicado('Kevyn')"> Clique </button>
+
+
+
+<div class="col-4 mx-auto">
+    <h3> {{ nome }} </h3> 
+    <br>
+    <button class="btn btn-success col-4 mx-auto" (click)="clicado('Kevyn')"> Clique </button> <br>
+    <br> 
+    <input
+     type="text" class="form-control" 
+     placeholder="Digite aqui"
+     [(ngModel)]="text">
+    <h4>Saída: {{ text }} </h4>
+</div>
