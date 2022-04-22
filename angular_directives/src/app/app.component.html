@@ -6,3 +6,37 @@
 >
     <h2 class="text-center"> Contador: {{ count }} </h2>
 </div>
+
+<!-- Diretivas Estruturais -->
+<h2 *ngIf="count > 7;else menor">O contador passou de 7!</h2>
+
+<ng-template #menor>
+<h2> O contador é menor que 7!</h2>
+</ng-template>
+
+<ul [ngSwitch]="count" class="list-group mx-auto col-3 text-center">
+    <li 
+    class="list-group-item"
+    *ngSwitchCase="3"
+    >É igual a 3</li>
+    
+    <li 
+    class="list-group-item"
+    *ngSwitchCase="5"
+    >É igual a 5</li>
+    
+    <li 
+    class="list-group-item"
+    *ngSwitchCase="8"
+    >É igual a 8</li>
+
+    <li 
+    class="list-group-item"
+    *ngSwitchCase="2"
+    >É igual a 2</li>
+    <li 
+    class="list-group-item"
+    *ngSwitchDefault
+    >THIS IS A DEFAULT!</li>
+    
+</ul>
